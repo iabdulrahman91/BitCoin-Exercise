@@ -16,10 +16,13 @@
 // });
 
 Route::get('/', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
-Route::get('/services', 'PagesController@services');
 Route::get('/price', 'PagesController@price');
+Route::get('/price/{id}',['uses' => 'PagesController@price']);
 
+// Route::get('/price/{id}', function($id){
+// 	$url = url("https://api.coinmarketcap.com/v1/ticker/".$id."/");
+// 	dd($url);
+// });
 //Route::resource('posts', 'PostsController');
 Auth::routes();
 
