@@ -16,7 +16,8 @@
     	<ul class="list-group">
 	    	@foreach($myarry as $item)
 	    		<li class="list-group-item">
-	    			{{$item}}
+	    			<a class="btn btn-primary btn-lg" href=price/{{$item}} role="button">{{$item}}</a>
+                </li>
 	    		</li>
 	    	@endforeach
     	</ul>
