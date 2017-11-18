@@ -22,7 +22,10 @@
                 &nbsp;
             </ul>
             <ul class="nav navbar-nav">
+                @auth
 				<li><a href="/price">$Price</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                @endauth
 			</ul>
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
