@@ -2,9 +2,8 @@
 
 @section('content')
     <h1>Price</h1>
-    <p>This is the Price page</p><br>
+    <p>These are your Favorite coins : </p><br>
     <div>
-    	<a class="btn btn-primary btn-lg" href="/allcoins" role="button">All coins</a>
     	<div class="jumbotron text-center">
     	<!-- <h1>Welcome to $bitCoin</h1>
     	<p>Please select A coin </p>
@@ -20,6 +19,11 @@
 	    		</li>
 	    	@endforeach
     	</ul>
+    	@else
+    		<h2>Please Add Favorite coins from the dashboard</h2>
+    		<br>
+    		<br>
+    		<a class="btn btn-primary btn-lg" href="/dashboard" role="button">Go To Dashboard</a>
     	@endif
     </div>
     </div>

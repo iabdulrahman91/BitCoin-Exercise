@@ -25,7 +25,7 @@
                 <p></p>
             </div>
         </div><br>
-    	<a class="btn btn-primary btn-lg" href="/price" role="button">Back</a>
+    	<a class="btn btn-primary btn-lg" href="/price" role="button">Back</a> <a class="btn btn-success btn-lg" href="/add/{{$coinDetails->name}}" role="button">&hearts;</a>
     	<div class="jumbotron text-center">
     	<p>{{$coinDetails->name}} Details :</p>
     	<p>

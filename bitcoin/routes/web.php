@@ -21,10 +21,16 @@ Route::get('/price', 'PagesController@price');
 Route::get('/price/{id}',['uses' => 'PagesController@price']);
 Route::get('/allcoins', 'PagesController@allcoins');
 
-// Route::get('/price/{id}', function($id){
-// 	$url = url("https://api.coinmarketcap.com/v1/ticker/".$id."/");
-// 	dd($url);
-// });
+Route::get('/add/{coin}', function($coin){
+	$myid = Auth::user()->id;
+
+	DB::table('coins')->insert(
+    ['user_id' => $myid, 'coin_name' => $coin ,'created_at' => NOW(),'updated_at' => NOW()]
+    );
+    return view('pages.index');
+	
+
+});
 //Route::resource('posts', 'PostsController');
 Auth::routes();
 

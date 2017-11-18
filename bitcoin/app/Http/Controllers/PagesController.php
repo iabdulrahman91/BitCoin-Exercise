@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
+//to bring Coin model
+use App\Coin;
+
 class PagesController extends Controller
 {
     public function index(){
@@ -53,14 +56,26 @@ class PagesController extends Controller
         return view('pages.showcoins', compact('myarry'));
 
     }
+
+
     public function price($id=''){
         if (Auth::check()) {
         // The user is logged in...
 
+            $coinDB = Coin::all()->where('user_id',Auth::user()->id);
+            //return($coinDB[0]->coin_name);
+
+            $coins = [];
+            foreach ($coinDB as $item) {
+                array_push($coins, $item->coin_name);
+            }
+            
+            
+
             if($id===''){
                 $data = array(
                 'title' => '$$$ :)',
-                'coins' => ['bitcoin', 'ethereum']);
+                'coins' => $coins);
 
             return view('pages.price')->with($data);
             }

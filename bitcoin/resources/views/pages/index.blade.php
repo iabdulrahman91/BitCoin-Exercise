@@ -7,7 +7,7 @@
     	@guest
     		<p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/register" role="button">Register</a></p>
     	@else
-    		<p>Enjoy the project {{ Auth::user()->name }}</p>
+    		<h2>Hello {{ Auth::user()->name }}</h2>
     	@endguest
 
     </div>

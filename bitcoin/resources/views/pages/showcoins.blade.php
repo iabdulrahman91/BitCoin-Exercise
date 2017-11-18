@@ -3,7 +3,7 @@
 @section('content')
     <h1>All Coins</h1>
     <p>These are all available coins: </p><br>
-    <a class="btn btn-primary btn-lg" href="/price" role="button">Back</a>
+    <a class="btn btn-primary btn-lg" href="/dashboard" role="button">Back</a>
     <div>
     	<div class="jumbotron text-center">
     	<!-- <h1>Welcome to $bitCoin</h1>
